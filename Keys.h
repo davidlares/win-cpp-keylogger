@@ -8,12 +8,12 @@ using namespace std;
 
 // library for populating keyboards strokes into a C++ Map
 
-class KeyPair() {
+class KeyPair {
 	public:
 		// constructor
 		KeyPair(const string &vk = "", const string &name = ""){
-			this.VKName = vk;
-			this.Name = name;
+			VKName = vk;
+			Name = name;
 		}
 		// variables
 		string VKName;
@@ -21,12 +21,12 @@ class KeyPair() {
 };
 
 // store a map of keys from the system - translation
-class Keys() {
+class Keys {
 	public:
-		map<int, KeyPair> KEYS;		
+		static map<int, KeyPair> KEYS;		
 };
 
-# map list
+// map list
 map<int, KeyPair> Keys::KEYS = {
     {0xC1, {"[VK_ABNT_C1]", "[Abnt C1]"}},
 	{0xC2, {"[VK_ABNT_C2]", "[Abnt C2]"}},
@@ -157,7 +157,7 @@ map<int, KeyPair> Keys::KEYS = {
 	{0x7D, {"[VK_F14]", "[F14]"}},
 	{0x7E, {"[VK_F15]", "[F15]"}},
 	{0x7F, {"[VK_F16]", "[F16]"}},
-	0x80, {"[VK_F17]", "[F17]"}},
+	{0x80, {"[VK_F17]", "[F17]"}},
 	{0x81, {"[VK_F18]", "[F18]"}},
 	{0x82, {"[VK_F19]", "[F19]"}},
 	{0x71, {"[VK_F2]", "[F2]"}},

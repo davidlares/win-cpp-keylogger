@@ -4,6 +4,7 @@
 #include <ctime> // retrieving time functions
 #include <string> // string handling
 #include <sstream> // string convertions (log files)
+#include <fstream>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ namespace Helper {
 			struct tm *info = localtime(&ms); // pointer to tm struct
 			D = info->tm_mday;
 			m = info->tm_mon + 1;
-			Y = 1900 + info->tm_year;
+			y = 1900 + info->tm_year;
 			M = info->tm_min;
 			H = info->tm_hour;
 			S = info->tm_sec;
@@ -41,12 +42,12 @@ namespace Helper {
 		// formating time
 		string GetTimeString(const string &separator = ":") const {
 			return string(H < 10 ? "0" : "") + ToString(H) + separator + 
-				   string(M < 10 ? "0") + ToString(M) + separator + 
+				   string(M < 10 ? "0" : "") + ToString(M) + separator + 
 				   string(S < 10 ? separator : "") + ToString(S);
 		}
 		// putting it all together
 		string GetDateTimeString(const string &separator = ":") const {
-			return GetDateString() + " " + getTimeString(separator);
+			return GetDateString() + " " + GetTimeString(separator);
 		}
 	};
 
@@ -61,7 +62,7 @@ namespace Helper {
 	
 	// recording strokes for debugging (independent)
 	void WriteAppLog(const string &s) {
-		ofstream_file("log.txt", ios::app);
+		ofstream file("log.txt", ios::app);
 		file << "[" << Helper::DateTime().GetDateTimeString() << "]" << "\n" << s << endl << "\n";
 		file.close();
 	}

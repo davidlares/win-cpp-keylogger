@@ -35,7 +35,7 @@ namespace Base64 {
 		int val = 0; 
 		int bits = -6; // groups
 		const unsigned int b63 = 0x3F;
-		for(const auto &C : s){ 
+		for(const auto &c : s){ 
 			// auto = unkown data variable
 			val = (val << 8) + c; // shifted left by 8 places 
 			bits += 8; // adding 8 to the number of bits
@@ -47,7 +47,7 @@ namespace Base64 {
 				ret.push_back(BASE64_CODES[((val << 8) >> (bits + 8)) & b63]);
 			}
 			while(ret.size() % 4){
-				ret.push_back("=");
+				ret.push_back('=');
 			} 
 			return ret;
 		}

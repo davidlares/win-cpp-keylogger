@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=2
+UnitCount=4
 
 [VersionInfo]
 Major=1
@@ -62,6 +62,26 @@ BuildCmd=
 
 [Unit2]
 FileName=Keys.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=Helper.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=Base64.h
 CompileCpp=1
 Folder=
 Compile=1
