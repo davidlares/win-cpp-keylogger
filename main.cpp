@@ -3,6 +3,7 @@
 #include "Helper.h"
 #include "Keys.h"
 #include "Base64.h"
+#include "IO.h"
 
 using namespace std;
 
