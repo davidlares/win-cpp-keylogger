@@ -1,0 +1,11 @@
+Compiler Options for Dev-C++
+
+Compiler
+---
+[Original] = blank 
+[For the KeyLogger] = std=c++11 -mwindows
+
+For the linker
+---
+[Original] = -static-libgcc
+[For the keylogger] -mswindows
