@@ -4,12 +4,13 @@
 #include "Keys.h"
 #include "Base64.h"
 #include "IO.h"
+#include "Timer.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
 	
-	// disabling render prompt
+	// disabling render prompt (main thread)
 	MSG Msg;
 	// infinite loop for taking messages
 	while(GetMessage (&Msg, NULL, 0, 0)) {
