@@ -108,7 +108,7 @@ class Timer {
 		}
 		
 		// returning the function - expected: called and executed
-		const function<void(void)> & Function() const {
+		const function<void(void)> &Function() const {
 			return funct;
 		}
 };	
