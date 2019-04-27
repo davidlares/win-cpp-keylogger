@@ -1,4 +1,6 @@
 *.txt
+*.txt.txt
 Makefile.win
 main.o
 davidLogger.dev
+davidLogger.layout
