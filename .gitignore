@@ -1,0 +1,4 @@
+*.txt
+Makefile.win
+main.o
+davidLogger.dev
