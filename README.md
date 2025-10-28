@@ -1,6 +1,6 @@
-## davidLogger
+## Logger
 
-This repo is a Keylogger for Windows-based OS built with C++ 11 Standards, Windows API's and Powershell Scripts for triggering emails. A Keylogger is a piece of software that tracks keyboard strokes without the user's consent. 
+This repo is a Keylogger for Windows-based OS built with C++ 11 Standards, Windows API's and PowerShell scripts for triggering emails. A Keylogger is a piece of software that tracks keyboard strokes without the user's consent. 
 
 This particular program uses C++ libraries for handling threads, Date formatting, Encoding, IO operations for directories and logs, etc. Also handles an embedded PowerShell Script (present in most recent Windows OS versions) for dispatching emails via SMTP protocols (usually Gmail accounts)
 
@@ -18,7 +18,7 @@ We can also  add (optionally) the `-mwindows` flag to this process
 
 #### Encoding / Encrypting Header File
 
-For doing this simple and avoid installation process for this keylogger, we cannot place robust solutions for "encrypting" processes. We use the Base64 procedure for attaching the results of the strokes to an email
+To do this simply and avoid the installation process for this keylogger, we cannot place robust solutions for "encrypting" processes. We use the Base64 procedure for attaching the results of the strokes to an email
 
 So.
 
@@ -28,7 +28,7 @@ So.
 
 1. We will transfer bytes into Human Readable Strings, something like [A-Z] [a-z] and numbers.
 2. Starting from 0 index, the previous cases top 62 possibilities, adding the plus (+) as the 63 character, and the (/) as the 64 character = Base64
-3. There's a mandatory pattern char that has to be equally sized (CHAR CODES) used as a label for encoding strings.
+3. There's a mandatory pattern character that has to be equally sized (CHAR CODES) used as a label for encoding strings.
 4. All the characters are printable, and every character can be represented in only base64 characters
 5. They are all transferred without any data loss.
 
@@ -53,7 +53,7 @@ But:
    3. 000101: 5 (in Decimals) => F (encoded string)
    4. 101110: 46 (in Decimals) => u (encoded string)
 
-What we can get from this: Base64 is an encoding process, not an encryption process = things can be reversed.
+What we can get from this: Base64 is an encoding process, not an encryption process = so things can be reversed.
 
 #### Other key concepts
 
@@ -62,7 +62,7 @@ The **Timer.h** library is one of the key components because it is responsible f
 Threads (processes that can share the same libraries, variables, and other memory resources)
 
 1. Multiple Threads running in the same process (this is vital for keyboard input: records strokes)
-2. It is commonly used of concurrent tasks executions.
+2. It is commonly used for concurrent task executions.
 
 Chrono is very useful for precise time measurements. Windows API uses Chrono functions for querying performance for handling milliseconds
 
@@ -72,7 +72,7 @@ This software is intended for particular educational purposes. It can be extreme
 
 ## Exec File
 
-It is located on the root repo: is called davidlogger.exe
+It is located in the root repo: is called davidlogger.exe
 
 ## Credits
 [David Lares S](https://davidlares.com)
